@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NPK Sensor Dashboard</title>
+    <link rel="stylesheet" href="styles/info.css" />
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <img src="assets/Dashboard_logo.png" alt="Logo" class="logo" />
+        <h1>PNDT Device Dashboard</h1>
+      </div>
+      <!-- Timestamp moved to the top-right corner -->
+      <div class="timestamp" id="timestampCard">
+        <h3>Timestamp</h3>
+        <p id="timestampValue">--</p>
+      </div>
+    </header>
+
+    <main>
+      <h2>Recent Sensor Data</h2>
+
+      <!-- Macronutrients Section -->
+      <section>
+        <h3>Macronutrients</h3>
+        <div class="data-grid">
+          <div class="card" id="nitrogenCard">
+            <h4>Nitrogen (mg/kg)</h4>
+            <p id="nitrogenValue">--</p>
+          </div>
+          <div class="card" id="phosphorusCard">
+            <h4>Phosphorus (mg/kg)</h4>
+            <p id="phosphorusValue">--</p>
+          </div>
+          <div class="card" id="potassiumCard">
+            <h4>Potassium (mg/kg)</h4>
+            <p id="potassiumValue">--</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Soil Properties Section -->
+      <section>
+        <h3>Soil Properties</h3>
+        <div class="data-grid">
+          <div class="card" id="phCard">
+            <h4>pH</h4>
+            <p id="phValue">--</p>
+          </div>
+          <div class="card" id="Ec">
+            <h4>Electrical Conductivity (dS/m)</h4>
+            <p id="EcValue">--</p>
+          </div>
+          <div class="card" id="temperatureCard">
+            <h4>Temperature (°C)</h4>
+            <p id="temperatureValue">--</p>
+          </div>
+          <div class="card" id="humidityCard">
+            <h4>Humidity (%)</h4>
+            <p id="humidityValue">--</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Micronutrients Section -->
+      <section>
+        <h3>Micronutrients</h3>
+        <div class="data-grid">
+          <div class="card" id="zincCard">
+            <h4>Zinc (mg/kg)</h4>
+            <p id="zincValue">--</p>
+          </div>
+          <div class="card" id="boronCard">
+            <h4>Boron (mg/kg)</h4>
+            <p id="boronValue">--</p>
+          </div>
+          <div class="card" id="manganeseCard">
+            <h4>Manganese (mg/kg)</h4>
+            <p id="manganeseValue">--</p>
+          </div>
+          <div class="card" id="molybdenumCard">
+            <h4>Molybdenum (mg/kg)</h4>
+            <p id="molybdenumValue">--</p>
+          </div>
+          <div class="card" id="ironCard">
+            <h4>Iron (mg/kg)</h4>
+            <p id="ironValue">--</p>
+          </div>
+          <div class="card" id="copperCard">
+            <h4>Copper (mg/kg)</h4>
+            <p id="copperValue">--</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Button to download data, moved to bottom-center -->
+      <div class="download-section">
+        <button id="downloadCsvButton">Download Data (CSV)</button>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 Nature-Based IoT Dashboard</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
